@@ -8,20 +8,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="manifest" href="site.webmanifest">
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+		<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/app/img/favicon.ico') }}">
 
 		<!-- CSS here -->
-            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-            <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-            <link rel="stylesheet" href="assets/css/slicknav.css">
-            <link rel="stylesheet" href="assets/css/animate.min.css">
-            <link rel="stylesheet" href="assets/css/magnific-popup.css">
-            <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-            <link rel="stylesheet" href="assets/css/themify-icons.css">
-            <link rel="stylesheet" href="assets/css/flaticon.css">
-            <link rel="stylesheet" href="assets/css/slick.css">
-            <link rel="stylesheet" href="assets/css/nice-select.css">
-            <link rel="stylesheet" href="assets/css/style.css">
+            <link rel="stylesheet" href="{{ asset('assets/app/css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/app/css/owl.carousel.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/app/css/slicknav.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/app/css/animate.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/app/css/magnific-popup.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/app/css/fontawesome-all.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/app/css/themify-icons.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/app/css/flaticon.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/app/css/slick.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/app/css/nice-select.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/app/css/style.css') }}">
    </head>
 
    <body>
@@ -32,7 +32,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder.png" alt="">
+                    <img src="{{ asset('assets/app/img/logo/loder.png') }}" alt="">
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
                     <!-- Logo -->
                     <div class="col-xl-2 col-lg-1 col-md-1">
                         <div class="logo">
-                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                        <a href="index.html"><img src="{{ asset('assets/app/img/logo/logo.png') }}" alt=""></a>
                         </div>
                     </div>
                     <div class="col-xl-7 col-lg-8 col-md-6">
@@ -166,7 +166,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-practice mb-30">
                             <div class="practice-img">
-                                <img src="assets/img/legal/legal_1.png" alt="">
+                                <img src="{{ asset('assets/app/img/legal/legal_1.png')}}" alt="">
 
                                 <!-- "practice-icon-->
                                 <div class="practice-icon">
@@ -182,7 +182,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-practice mb-30">
                             <div class="practice-img">
-                                <img src="assets/img/legal/legal_2.png" alt="">
+                                <img src="{{ asset('assets/app/img/legal/legal_2.png') }}" alt="">
 
                                 <!-- "practice-icon-->
                                 <div class="practice-icon">
@@ -198,7 +198,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-practice mb-30">
                             <div class="practice-img">
-                                <img src="assets/img/legal/legal_3.png" alt="">
+                                <img src="{{ asset('assets/app/img/legal/legal_3.png') }}" alt="">
 
                                 <!-- "practice-icon-->
                                 <div class="practice-icon">
@@ -245,10 +245,10 @@
                         <!-- about-img -->
                         <div class="about-img ">
                             <div class="about-font-img f-left">
-                                <img src="assets/img/about/about-low-front.jpg" alt="">
+                                <img src="{{ asset('assets/app/img/about/about-low-front.jpg') }}" alt="">
                             </div>
                             <div class="about-back-img f-right d-none d-md-block">
-                                <img src="assets/img/about/about-low-back.jpg" alt="">
+                                <img src="{{ asset('assets/app/img/about/about-low-back.jpg') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -258,7 +258,7 @@
         <!-- About Law End-->
 
         <!-- Contact form Start -->
-        <div class="contact-form bg-height pb-160" data-background="assets/img/about/contact_bg.jpg">
+        <div class="contact-form bg-height pb-160" data-background="{{ asset('assets/app/img/about/contact_bg.jpg') }}">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-8 col-lg-8 offset-lg-2 offset-xl-2">
@@ -353,7 +353,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_1.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_1.png')}}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Accidental</span>
@@ -369,7 +369,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_2.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_2.png')}}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Devorce</span>
@@ -385,7 +385,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_3.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_3.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Study</span>
@@ -406,7 +406,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_2.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_2.png')}}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Devorce</span>
@@ -422,7 +422,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_1.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_1.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Accidental</span>
@@ -438,7 +438,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_3.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_3.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Study</span>
@@ -459,7 +459,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_3.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_3.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Study</span>
@@ -475,7 +475,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_1.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_1.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Accidental</span>
@@ -491,7 +491,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_2.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_2.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Devorce</span>
@@ -512,7 +512,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_2.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_2.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Devorce</span>
@@ -528,7 +528,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_1.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_1.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Accidental</span>
@@ -544,7 +544,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_3.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_3.png') }}" alt="">
 
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
@@ -568,7 +568,7 @@
         <!-- Recent-case-area End -->
 
         <!-- Testimonial Start -->
-        <div class="testimonial-area testimonial-padding" data-background="assets/img/testmonial/testi_bg.png">
+        <div class="testimonial-area testimonial-padding" data-background="{{ asset('assets/app/img/testmonial/testi_bg.png') }}">
             <div class="container">
                 <!--Section Tittle  -->
                 <div class="row ">
@@ -592,7 +592,7 @@
                                     <!-- founder -->
                                     <div class="testimonial-founder  ">
                                         <div class="founder-img">
-                                           <img src="assets/img/testmonial/Homepage_testi_1.png" alt="">
+                                           <img src="{{ asset('assets/app/img/testmonial/Homepage_testi_1.png') }}" alt="">
                                            <span>Devid jonathan</span>
                                         </div>
                                     </div>
@@ -608,7 +608,7 @@
                                     <!-- founder -->
                                     <div class="testimonial-founder  ">
                                         <div class="founder-img">
-                                           <img src="assets/img/testmonial/Homepage_testi_1.png" alt="">
+                                           <img src="{{ asset('assets/app/img/testmonial/Homepage_testi_1.png') }}" alt="">
                                            <span>Devid jonathan</span>
                                         </div>
                                     </div>
@@ -624,7 +624,7 @@
                                     <!-- founder -->
                                     <div class="testimonial-founder  ">
                                         <div class="founder-img">
-                                           <img src="assets/img/testmonial/Homepage_testi_1.png" alt="">
+                                           <img src="{{ asset('assets/app/img/testmonial/Homepage_testi_1.png') }}" alt="">
                                            <span>Devid jonathan</span>
                                         </div>
                                     </div>
@@ -652,7 +652,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4">
                         <div class="single-teams text-center">
                             <div class="team-img">
-                                <img src="assets/img/team/team_1.jpg" alt="">
+                                <img src="{{ asset('assets/app/img/team/team_1.jpg') }}" alt="">
                             </div>
                             <div class="team-caption">
                                 <h4><a href="#">Jhon Smith</a></h4>
@@ -663,7 +663,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4">
                         <div class="single-teams text-center">
                             <div class="team-img">
-                                <img src="assets/img/team/team_2.jpg" alt="">
+                                <img src="{{ asset('assets/app/img/team/team_2.jpg') }}" alt="">
                             </div>
                             <div class="team-caption">
                                 <h4><a href="#">Emma Bunton</a></h4>
@@ -816,42 +816,42 @@
 	<!-- JS here -->
 
 		<!-- All JS Custom Plugins Link Here here -->
-        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="{{ asset('assets/app/js/vendor/modernizr-3.5.0.min.js') }}"></script>
 		<!-- Jquery, Popper, Bootstrap -->
-		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="./assets/js/popper.min.js"></script>
-        <script src="./assets/js/bootstrap.min.js"></script>
+		<script src="{{ asset('assets/app/js/vendor/jquery-1.12.4.min.js') }}"></script>
+        <script src="{{ asset('assets/app/js/popper.min.js') }}"></script>
+        <script src="{{ asset('assets/app/js/bootstrap.min.js') }}"></script>
 	    <!-- Jquery Mobile Menu -->
-        <script src="./assets/js/jquery.slicknav.min.js"></script>
+        <script src="{{ asset('assets/app/js/jquery.slicknav.min.js') }}"></script>
 
 		<!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="./assets/js/owl.carousel.min.js"></script>
-        <script src="./assets/js/slick.min.js"></script>
+        <script src="{{ asset('assets/app/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('assets/app/js/slick.min.js') }}"></script>
 
 		<!-- One Page, Animated-HeadLin -->
-        <script src="./assets/js/wow.min.js"></script>
-		<script src="./assets/js/animated.headline.js"></script>
-        <script src="./assets/js/jquery.magnific-popup.js"></script>
+        <script src="{{ asset('assets/app/js/wow.min.js') }}"></script>
+		<script src="{{ asset('assets/app/js/animated.headline.js') }}"></script>
+        <script src="{{ asset('assets/app/js/jquery.magnific-popup.js') }}"></script>
 
 		<!-- Scrollup, nice-select, sticky -->
-        <script src="./assets/js/jquery.scrollUp.min.js"></script>
-        <script src="./assets/js/jquery.nice-select.min.js"></script>
-		<script src="./assets/js/jquery.sticky.js"></script>
+        <script src="{{ asset('assets/app/js/jquery.scrollUp.min.js') }}"></script>
+        <script src="{{ asset('assets/app/js/jquery.nice-select.min.js') }}"></script>
+		<script src="{{ asset('assets/app/js/jquery.sticky.js') }}"></script>
 
         <!-- counter , waypoint -->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-        <script src="./assets/js/jquery.counterup.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js')"></script>
+        <script src="{{ asset('assets/app/js/jquery.counterup.min.js') }}"></script>
 
         <!-- counter -->
-        <script src="./assets/js/contact.js"></script>
-        <script src="./assets/js/jquery.form.js"></script>
-        <script src="./assets/js/jquery.validate.min.js"></script>
-        <script src="./assets/js/mail-script.js"></script>
-        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+        <script src="{{ asset('assets/app/js/contact.js') }}"></script>
+        <script src="{{ asset('assets/app/js/jquery.form.js') }}"></script>
+        <script src="{{ asset('assets/app/js/jquery.validate.min.js') }}"></script>
+        <script src="{{ asset('assets/app/js/mail-script.js') }}"></script>
+        <script src="{{ asset('assets/app/js/jquery.ajaxchimp.min.js') }}"></script>
 
 		<!-- Jquery Plugins, main Jquery -->
-        <script src="./assets/js/plugins.js"></script>
-        <script src="./assets/js/main.js"></script>
+        <script src="{{ asset('assets/app/js/plugins.js') }}"></script>
+        <script src="{{ asset('assets/app/js/main.js') }}"></script>
 
     </body>
 </html>
