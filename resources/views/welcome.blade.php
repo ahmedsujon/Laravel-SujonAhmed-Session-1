@@ -47,7 +47,7 @@
                     <!-- Logo -->
                     <div class="col-xl-2 col-lg-1 col-md-1">
                         <div class="logo">
-                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                        <a href="index.html"><img src="{{ asset('assets/app/img/logo/logo.png') }}" alt=""></a>
                         </div>
                     </div>
                     <div class="col-xl-7 col-lg-8 col-md-6">
@@ -166,7 +166,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-practice mb-30">
                             <div class="practice-img">
-                                <img src="assets/img/legal/legal_1.png" alt="">
+                                <img src="{{ asset('assets/app/img/legal/legal_1.png')}}" alt="">
 
                                 <!-- "practice-icon-->
                                 <div class="practice-icon">
@@ -182,7 +182,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-practice mb-30">
                             <div class="practice-img">
-                                <img src="assets/img/legal/legal_2.png" alt="">
+                                <img src="{{ asset('assets/app/img/legal/legal_2.png') }}" alt="">
 
                                 <!-- "practice-icon-->
                                 <div class="practice-icon">
@@ -198,7 +198,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-practice mb-30">
                             <div class="practice-img">
-                                <img src="assets/img/legal/legal_3.png" alt="">
+                                <img src="{{ asset('assets/app/img/legal/legal_3.png') }}" alt="">
 
                                 <!-- "practice-icon-->
                                 <div class="practice-icon">
@@ -245,10 +245,10 @@
                         <!-- about-img -->
                         <div class="about-img ">
                             <div class="about-font-img f-left">
-                                <img src="assets/img/about/about-low-front.jpg" alt="">
+                                <img src="{{ asset('assets/app/img/about/about-low-front.jpg') }}" alt="">
                             </div>
                             <div class="about-back-img f-right d-none d-md-block">
-                                <img src="assets/img/about/about-low-back.jpg" alt="">
+                                <img src="{{ asset('assets/app/img/about/about-low-back.jpg') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -258,7 +258,7 @@
         <!-- About Law End-->
 
         <!-- Contact form Start -->
-        <div class="contact-form bg-height pb-160" data-background="assets/img/about/contact_bg.jpg">
+        <div class="contact-form bg-height pb-160" data-background="{{ asset('assets/app/img/about/contact_bg.jpg') }}">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-8 col-lg-8 offset-lg-2 offset-xl-2">
@@ -353,7 +353,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_1.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_1.png')}}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Accidental</span>
@@ -369,7 +369,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_2.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_2.png')}}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Devorce</span>
@@ -385,7 +385,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_3.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_3.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Study</span>
@@ -406,7 +406,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_2.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_2.png')}}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Devorce</span>
@@ -422,7 +422,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_1.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_1.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Accidental</span>
@@ -438,7 +438,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_3.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_3.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Study</span>
@@ -459,7 +459,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_3.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_3.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Study</span>
@@ -475,7 +475,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_1.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_1.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Accidental</span>
@@ -491,7 +491,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_2.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_2.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Devorce</span>
@@ -512,7 +512,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_2.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_2.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Devorce</span>
@@ -528,7 +528,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_1.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_1.png') }}" alt="">
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
                                                 <span>Accidental</span>
@@ -544,7 +544,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="single-practice mb-30">
                                         <div class="practice-img">
-                                            <img src="assets/img/legal/legal_3.png" alt="">
+                                            <img src="{{ asset('assets/app/img/legal/legal_3.png') }}" alt="">
 
                                             <!-- "practice-icon-->
                                             <div class="practice-icon">
@@ -568,7 +568,7 @@
         <!-- Recent-case-area End -->
 
         <!-- Testimonial Start -->
-        <div class="testimonial-area testimonial-padding" data-background="assets/img/testmonial/testi_bg.png">
+        <div class="testimonial-area testimonial-padding" data-background="{{ asset('assets/app/img/testmonial/testi_bg.png') }}">
             <div class="container">
                 <!--Section Tittle  -->
                 <div class="row ">
@@ -592,7 +592,7 @@
                                     <!-- founder -->
                                     <div class="testimonial-founder  ">
                                         <div class="founder-img">
-                                           <img src="assets/img/testmonial/Homepage_testi_1.png" alt="">
+                                           <img src="{{ asset('assets/app/img/testmonial/Homepage_testi_1.png') }}" alt="">
                                            <span>Devid jonathan</span>
                                         </div>
                                     </div>
@@ -608,7 +608,7 @@
                                     <!-- founder -->
                                     <div class="testimonial-founder  ">
                                         <div class="founder-img">
-                                           <img src="assets/img/testmonial/Homepage_testi_1.png" alt="">
+                                           <img src="{{ asset('assets/app/img/testmonial/Homepage_testi_1.png') }}" alt="">
                                            <span>Devid jonathan</span>
                                         </div>
                                     </div>
@@ -624,7 +624,7 @@
                                     <!-- founder -->
                                     <div class="testimonial-founder  ">
                                         <div class="founder-img">
-                                           <img src="assets/img/testmonial/Homepage_testi_1.png" alt="">
+                                           <img src="{{ asset('assets/app/img/testmonial/Homepage_testi_1.png') }}" alt="">
                                            <span>Devid jonathan</span>
                                         </div>
                                     </div>
@@ -652,7 +652,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4">
                         <div class="single-teams text-center">
                             <div class="team-img">
-                                <img src="assets/img/team/team_1.jpg" alt="">
+                                <img src="{{ asset('assets/app/img/team/team_1.jpg') }}" alt="">
                             </div>
                             <div class="team-caption">
                                 <h4><a href="#">Jhon Smith</a></h4>
@@ -663,7 +663,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4">
                         <div class="single-teams text-center">
                             <div class="team-img">
-                                <img src="assets/img/team/team_2.jpg" alt="">
+                                <img src="{{ asset('assets/app/img/team/team_2.jpg') }}" alt="">
                             </div>
                             <div class="team-caption">
                                 <h4><a href="#">Emma Bunton</a></h4>
