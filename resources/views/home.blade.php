@@ -1,312 +1,423 @@
 @extends('layouts.admin')
 @section('content')
-<div class="row mt">
-          <div class="col-sm-3">
-            <section class="panel">
-              <div class="panel-body">
-                <a href="mail_compose.html" class="btn btn-compose">
-                  <i class="fa fa-pencil"></i>  Compose Mail
-                  </a>
-                <ul class="nav nav-pills nav-stacked mail-nav">
-                  <li class="active"><a href="inbox.html"> <i class="fa fa-inbox"></i> Inbox  <span class="label label-theme pull-right inbox-notification">3</span></a></li>
-                  <li><a href="#"> <i class="fa fa-envelope-o"></i> Send Mail</a></li>
-                  <li><a href="#"> <i class="fa fa-exclamation-circle"></i> Important</a></li>
-                  <li><a href="#"> <i class="fa fa-file-text-o"></i> Drafts <span class="label label-info pull-right inbox-notification">8</span></a></a>
-                  </li>
-                  <li><a href="#"> <i class="fa fa-trash-o"></i> Trash</a></li>
-                </ul>
-              </div>
-            </section>
-            <section class="panel">
-              <div class="panel-body">
-                <ul class="nav nav-pills nav-stacked labels-info ">
-                  <li>
-                    <h4>Friends Online</h4>
-                  </li>
-                  <li>
-                    <a href="#">
-                        <img src="img/friends/fr-10.jpg" class="img-circle" width="20">Laura
-                        <p><span class="label label-success">Available</span></p>
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                        <img src="img/friends/fr-05.jpg" class="img-circle" width="20">David
-                        <p><span class="label label-danger"> Busy</span></p>
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                        <img src="img/friends/fr-01.jpg" class="img-circle" width="20">Mark
-                        <p>Offline</p>
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                        <img src="img/friends/fr-03.jpg" class="img-circle" width="20">Phillip
-                        <p>Offline</p>
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                        <img src="img/friends/fr-02.jpg" class="img-circle" width="20">Joshua
-                        <p>Offline</p>
-                      </a>
-                  </li>
-                </ul>
-                <a href="#"> + Add More</a>
-                <div class="inbox-body text-center inbox-action">
-                  <div class="btn-group">
-                    <a class="btn mini btn-default" href="javascript:;">
-                      <i class="fa fa-power-off"></i>
-                      </a>
-                  </div>
-                  <div class="btn-group">
-                    <a class="btn mini btn-default" href="javascript:;">
-                      <i class="fa fa-cog"></i>
-                      </a>
-                  </div>
-                </div>
-              </div>
-            </section>
+<section class="wrapper">
+    <div class="row">
+      <div class="col-lg-9 main-chart">
+        <!--CUSTOM CHART START -->
+        <div class="border-head">
+        <h3>Welcome {{ Auth::user()->name }}</h3>
+        </div>
+        <div class="custom-bar-chart">
+          <ul class="y-axis">
+            <li><span>10.000</span></li>
+            <li><span>8.000</span></li>
+            <li><span>6.000</span></li>
+            <li><span>4.000</span></li>
+            <li><span>2.000</span></li>
+            <li><span>0</span></li>
+          </ul>
+          <div class="bar">
+            <div class="title">JAN</div>
+            <div class="value tooltips" data-original-title="8.500" data-toggle="tooltip" data-placement="top">85%</div>
           </div>
-          <div class="col-sm-9">
-            <section class="panel">
-              <header class="panel-heading wht-bg">
-                <h4 class="gen-case">
-                    Inbox (3)
-                    <form action="#" class="pull-right mail-src-position">
-                      <div class="input-append">
-                        <input type="text" class="form-control " placeholder="Search Mail">
-                      </div>
-                    </form>
-                  </h4>
-              </header>
-              <div class="panel-body minimal">
-                <div class="mail-option">
-                  <div class="chk-all">
-                    <div class="pull-left mail-checkbox">
-                      <input type="checkbox" class="">
-                    </div>
-                    <div class="btn-group">
-                      <a data-toggle="dropdown" href="#" class="btn mini all">
-                        All
-                        <i class="fa fa-angle-down "></i>
-                        </a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#"> None</a></li>
-                        <li><a href="#"> Read</a></li>
-                        <li><a href="#"> Unread</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="btn-group">
-                    <a data-original-title="Refresh" data-placement="top" data-toggle="dropdown" href="#" class="btn mini tooltips">
-                      <i class=" fa fa-refresh"></i>
-                      </a>
-                  </div>
-                  <div class="btn-group hidden-phone">
-                    <a data-toggle="dropdown" href="#" class="btn mini blue">
-                      More
-                      <i class="fa fa-angle-down "></i>
-                      </a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
-                      <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
-                    </ul>
-                  </div>
-                  <div class="btn-group">
-                    <a data-toggle="dropdown" href="#" class="btn mini blue">
-                      Move to
-                      <i class="fa fa-angle-down "></i>
-                      </a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
-                      <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
-                    </ul>
-                  </div>
-                  <ul class="unstyled inbox-pagination">
-                    <li><span>1-50 of 99</span></li>
-                    <li>
-                      <a class="np-btn" href="#"><i class="fa fa-angle-left  pagination-left"></i></a>
-                    </li>
-                    <li>
-                      <a class="np-btn" href="#"><i class="fa fa-angle-right pagination-right"></i></a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="table-inbox-wrap ">
-                  <table class="table table-inbox table-hover">
-                    <tbody>
-                      <tr class="unread">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message  dont-show"><a href="mail_view.html">Google Inc.</a></td>
-                        <td class="view-message "><a href="mail_view.html">Your new account is ready.</a></td>
-                        <td class="view-message  inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                        <td class="view-message  text-right">08:10 AM</td>
-                      </tr>
-                      <tr class="unread">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show"><a href="mail_view.html">Mark Thompson</a></td>
-                        <td class="view-message"><a href="mail_view.html">Last project updates</a></td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">March 15</td>
-                      </tr>
-                      <tr class="unread">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show"><a href="mail_view.html">Wonder Corp.</a></td>
-                        <td class="view-message"><a href="mail_view.html">Thanks for your registration</a></td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">March 15</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show"><a href="mail_view.html">Facebook</a></td>
-                        <td class="view-message"><a href="mail_view.html">New Friendship Request</a></td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">March 13</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                        <td class="view-message dont-show"><a href="mail_view.html">Mark Webber <span class="label label-danger pull-right">urgent</span></a></td>
-                        <td class="view-message"><a href="mail_view.html">The server is down</a></td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">March 09</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                        <td class="view-message dont-show"><a href="mail_view.html">Facebook</a></td>
-                        <td class="view-message"><a href="mail_view.html">New message from Patrick S.</a></td>
-                        <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                        <td class="view-message text-right">March 08</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                        <td class="view-message dont-show">Paypal inc.</td>
-                        <td class="view-message">New payment received</td>
-                        <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                        <td class="view-message text-right">March 04</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show">Andrea <span class="label label-success pull-right">girlfriend</span></td>
-                        <td class="view-message view-message">Weekend plans</td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">March 04</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show">David Green</td>
-                        <td class="view-message view-message">Soccer tickets</td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">February 22</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show">Evelyn <span class="label label-info pull-right">family</span></td>
-                        <td class="view-message view-message">Surprise party</td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">February 19</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                        <td class="view-message dont-show">Martin Moore</td>
-                        <td class="view-message">Hey mate!</td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">February 17</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                        <td class="dont-show">Facebook</td>
-                        <td class="view-message">Paul published on your wall</td>
-                        <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                        <td class="view-message text-right">February 14</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show">Steve Stoll</td>
-                        <td class="view-message">Update developed</td>
-                        <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                        <td class="view-message text-right">February 11</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="dont-show">Laura Anton</td>
-                        <td class="view-message view-message">New subscription</td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">January 14</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show">Ryanair</td>
-                        <td class="view-message">Your flight tickets</td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">January 07</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show">Twitter</td>
-                        <td class="view-message">Password reset</td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">January 04</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </section>
+          <div class="bar ">
+            <div class="title">FEB</div>
+            <div class="value tooltips" data-original-title="5.000" data-toggle="tooltip" data-placement="top">50%</div>
+          </div>
+          <div class="bar ">
+            <div class="title">MAR</div>
+            <div class="value tooltips" data-original-title="6.000" data-toggle="tooltip" data-placement="top">60%</div>
+          </div>
+          <div class="bar ">
+            <div class="title">APR</div>
+            <div class="value tooltips" data-original-title="4.500" data-toggle="tooltip" data-placement="top">45%</div>
+          </div>
+          <div class="bar">
+            <div class="title">MAY</div>
+            <div class="value tooltips" data-original-title="3.200" data-toggle="tooltip" data-placement="top">32%</div>
+          </div>
+          <div class="bar ">
+            <div class="title">JUN</div>
+            <div class="value tooltips" data-original-title="6.200" data-toggle="tooltip" data-placement="top">62%</div>
+          </div>
+          <div class="bar">
+            <div class="title">JUL</div>
+            <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip" data-placement="top">75%</div>
           </div>
         </div>
+        <!--custom chart end-->
+        <div class="row mt">
+          <!-- SERVER STATUS PANELS -->
+          <div class="col-md-4 col-sm-4 mb">
+            <div class="grey-panel pn donut-chart">
+              <div class="grey-header">
+                <h5>SERVER LOAD</h5>
+              </div>
+              <canvas id="serverstatus01" height="120" width="120"></canvas>
+              <script>
+                var doughnutData = [{
+                    value: 70,
+                    color: "#FF6B6B"
+                  },
+                  {
+                    value: 30,
+                    color: "#fdfdfd"
+                  }
+                ];
+                var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
+              </script>
+              <div class="row">
+                <div class="col-sm-6 col-xs-6 goleft">
+                  <p>Usage<br/>Increase:</p>
+                </div>
+                <div class="col-sm-6 col-xs-6">
+                  <h2>21%</h2>
+                </div>
+              </div>
+            </div>
+            <!-- /grey-panel -->
+          </div>
+          <!-- /col-md-4-->
+          <div class="col-md-4 col-sm-4 mb">
+            <div class="darkblue-panel pn">
+              <div class="darkblue-header">
+                <h5>DROPBOX STATICS</h5>
+              </div>
+              <canvas id="serverstatus02" height="120" width="120"></canvas>
+              <script>
+                var doughnutData = [{
+                    value: 60,
+                    color: "#1c9ca7"
+                  },
+                  {
+                    value: 40,
+                    color: "#f68275"
+                  }
+                ];
+                var myDoughnut = new Chart(document.getElementById("serverstatus02").getContext("2d")).Doughnut(doughnutData);
+              </script>
+              <p>April 17, 2014</p>
+              <footer>
+                <div class="pull-left">
+                  <h5><i class="fa fa-hdd-o"></i> 17 GB</h5>
+                </div>
+                <div class="pull-right">
+                  <h5>60% Used</h5>
+                </div>
+              </footer>
+            </div>
+            <!--  /darkblue panel -->
+          </div>
+          <!-- /col-md-4 -->
+          <div class="col-md-4 col-sm-4 mb">
+            <!-- REVENUE PANEL -->
+            <div class="green-panel pn">
+              <div class="green-header">
+                <h5>REVENUE</h5>
+              </div>
+              <div class="chart mt">
+                <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[200,135,667,333,526,996,564,123,890,464,655]"></div>
+              </div>
+              <p class="mt"><b>$ 17,980</b><br/>Month Income</p>
+            </div>
+          </div>
+          <!-- /col-md-4 -->
+        </div>
+        <!-- /row -->
+        <div class="row">
+          <!-- WEATHER PANEL -->
+          <div class="col-md-4 mb">
+            <div class="weather pn">
+              <i class="fa fa-cloud fa-4x"></i>
+              <h2>11º C</h2>
+              <h4>BUDAPEST</h4>
+            </div>
+          </div>
+          <!-- /col-md-4-->
+          <!-- DIRECT MESSAGE PANEL -->
+          <div class="col-md-8 mb">
+            <div class="message-p pn">
+              <div class="message-header">
+                <h5>DIRECT MESSAGE</h5>
+              </div>
+              <div class="row">
+                <div class="col-md-3 centered hidden-sm hidden-xs">
+                  <img src="img/ui-danro.jpg" class="img-circle" width="65">
+                </div>
+                <div class="col-md-9">
+                  <p>
+                    <name>Dan Rogers</name>
+                    sent you a message.
+                  </p>
+                  <p class="small">3 hours ago</p>
+                  <p class="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                  <form class="form-inline" role="form">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="exampleInputText" placeholder="Reply Dan">
+                    </div>
+                    <button type="submit" class="btn btn-default">Send</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- /Message Panel-->
+          </div>
+          <!-- /col-md-8  -->
+        </div>
+        <div class="row">
+          <!-- TWITTER PANEL -->
+          <div class="col-md-4 mb">
+            <div class="twitter-panel pn">
+              <i class="fa fa-twitter fa-4x"></i>
+              <p>Dashio is here! Take a look and enjoy this new Bootstrap Dashboard theme.</p>
+              <p class="user">@Alvrz_is</p>
+            </div>
+          </div>
+          <!-- /col-md-4 -->
+          <div class="col-md-4 mb">
+            <!-- WHITE PANEL - TOP USER -->
+            <div class="white-panel pn">
+              <div class="white-header">
+                <h5>TOP USER</h5>
+              </div>
+              <p><img src="img/ui-zac.jpg" class="img-circle" width="50"></p>
+              <p><b>Zac Snider</b></p>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="small mt">MEMBER SINCE</p>
+                  <p>2012</p>
+                </div>
+                <div class="col-md-6">
+                  <p class="small mt">TOTAL SPEND</p>
+                  <p>$ 47,60</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /col-md-4 -->
+          <div class="col-md-4 mb">
+            <!-- INSTAGRAM PANEL -->
+            <div class="instagram-panel pn">
+              <i class="fa fa-instagram fa-4x"></i>
+              <p>@THISISYOU<br/> 5 min. ago
+              </p>
+              <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
+            </div>
+          </div>
+          <!-- /col-md-4 -->
+        </div>
+        <!-- /row -->
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4 mb">
+            <div class="product-panel-2 pn">
+              <div class="badge badge-hot">HOT</div>
+              <img src="img/product.jpg" width="200" alt="">
+              <h5 class="mt">Flat Pack Heritage</h5>
+              <h6>TOTAL SALES: 1388</h6>
+              <button class="btn btn-small btn-theme04">FULL REPORT</button>
+            </div>
+          </div>
+          <!-- /col-md-4 -->
+          <!--  PROFILE 02 PANEL -->
+          <div class="col-lg-4 col-md-4 col-sm-4 mb">
+            <div class="content-panel pn">
+              <div id="profile-02">
+                <div class="user">
+                  <img src="img/friends/fr-06.jpg" class="img-circle" width="80">
+                  <h4>DJ SHERMAN</h4>
+                </div>
+              </div>
+              <div class="pr2-social centered">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+              </div>
+            </div>
+            <!-- /panel -->
+          </div>
+          <!--/ col-md-4 -->
+          <div class="col-md-4 col-sm-4 mb">
+            <div class="green-panel pn">
+              <div class="green-header">
+                <h5>DISK SPACE</h5>
+              </div>
+              <canvas id="serverstatus03" height="120" width="120"></canvas>
+              <script>
+                var doughnutData = [{
+                    value: 60,
+                    color: "#2b2b2b"
+                  },
+                  {
+                    value: 40,
+                    color: "#fffffd"
+                  }
+                ];
+                var myDoughnut = new Chart(document.getElementById("serverstatus03").getContext("2d")).Doughnut(doughnutData);
+              </script>
+              <h3>60% USED</h3>
+            </div>
+          </div>
+          <!-- /col-md-4 -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /col-lg-9 END SECTION MIDDLE -->
+      <!-- **********************************************************************************************************************************************************
+          RIGHT SIDEBAR CONTENT
+          *********************************************************************************************************************************************************** -->
+      <div class="col-lg-3 ds">
+        <!--COMPLETED ACTIONS DONUTS CHART-->
+        <div class="donut-main">
+          <h4>COMPLETED ACTIONS & PROGRESS</h4>
+          <canvas id="newchart" height="130" width="130"></canvas>
+          <script>
+            var doughnutData = [{
+                value: 70,
+                color: "#4ECDC4"
+              },
+              {
+                value: 30,
+                color: "#fdfdfd"
+              }
+            ];
+            var myDoughnut = new Chart(document.getElementById("newchart").getContext("2d")).Doughnut(doughnutData);
+          </script>
+        </div>
+        <!--NEW EARNING STATS -->
+        <div class="panel terques-chart">
+          <div class="panel-body">
+            <div class="chart">
+              <div class="centered">
+                <span>TODAY EARNINGS</span>
+                <strong>$ 890,00 | 15%</strong>
+              </div>
+              <br>
+              <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[200,135,667,333,526,996,564,123,890,564,455]"></div>
+            </div>
+          </div>
+        </div>
+        <!--new earning end-->
+        <!-- RECENT ACTIVITIES SECTION -->
+        <h4 class="centered mt">RECENT ACTIVITY</h4>
+        <!-- First Activity -->
+        <div class="desc">
+          <div class="thumb">
+            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+          </div>
+          <div class="details">
+            <p>
+              <muted>Just Now</muted>
+              <br/>
+              <a href="#">Paul Rudd</a> purchased an item.<br/>
+            </p>
+          </div>
+        </div>
+        <!-- Second Activity -->
+        <div class="desc">
+          <div class="thumb">
+            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+          </div>
+          <div class="details">
+            <p>
+              <muted>2 Minutes Ago</muted>
+              <br/>
+              <a href="#">James Brown</a> subscribed to your newsletter.<br/>
+            </p>
+          </div>
+        </div>
+        <!-- Third Activity -->
+        <div class="desc">
+          <div class="thumb">
+            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+          </div>
+          <div class="details">
+            <p>
+              <muted>3 Hours Ago</muted>
+              <br/>
+              <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
+            </p>
+          </div>
+        </div>
+        <!-- Fourth Activity -->
+        <div class="desc">
+          <div class="thumb">
+            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+          </div>
+          <div class="details">
+            <p>
+              <muted>7 Hours Ago</muted>
+              <br/>
+              <a href="#">Brando Page</a> purchased a year subscription.<br/>
+            </p>
+          </div>
+        </div>
+        <!-- USERS ONLINE SECTION -->
+        <h4 class="centered mt">TEAM MEMBERS ONLINE</h4>
+        <!-- First Member -->
+        <div class="desc">
+          <div class="thumb">
+            <img class="img-circle" src="img/ui-divya.jpg" width="35px" height="35px" align="">
+          </div>
+          <div class="details">
+            <p>
+              <a href="#">DIVYA MANIAN</a><br/>
+              <muted>Available</muted>
+            </p>
+          </div>
+        </div>
+        <!-- Second Member -->
+        <div class="desc">
+          <div class="thumb">
+            <img class="img-circle" src="img/ui-sherman.jpg" width="35px" height="35px" align="">
+          </div>
+          <div class="details">
+            <p>
+              <a href="#">DJ SHERMAN</a><br/>
+              <muted>I am Busy</muted>
+            </p>
+          </div>
+        </div>
+        <!-- Third Member -->
+        <div class="desc">
+          <div class="thumb">
+            <img class="img-circle" src="img/ui-danro.jpg" width="35px" height="35px" align="">
+          </div>
+          <div class="details">
+            <p>
+              <a href="#">DAN ROGERS</a><br/>
+              <muted>Available</muted>
+            </p>
+          </div>
+        </div>
+        <!-- Fourth Member -->
+        <div class="desc">
+          <div class="thumb">
+            <img class="img-circle" src="img/ui-zac.jpg" width="35px" height="35px" align="">
+          </div>
+          <div class="details">
+            <p>
+              <a href="#">Zac Sniders</a><br/>
+              <muted>Available</muted>
+            </p>
+          </div>
+        </div>
+        <!-- CALENDAR-->
+        <div id="calendar" class="mb">
+          <div class="panel green-panel no-margin">
+            <div class="panel-body">
+              <div id="date-popover" class="popover top" style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
+                <div class="arrow"></div>
+                <h3 class="popover-title" style="disadding: none;"></h3>
+                <div id="date-popover-content" class="popover-content"></div>
+              </div>
+              <div id="my-calendar"></div>
+            </div>
+          </div>
+        </div>
+        <!-- / calendar -->
+      </div>
+      <!-- /col-lg-3 -->
+    </div>
+    <!-- /row -->
+  </section>
 @endsection
