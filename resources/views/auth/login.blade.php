@@ -58,7 +58,7 @@
           <div class="login-social-link centered">
             <p>or you can sign in via your social network</p>
             <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
-            <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
+          <a href=""><button class="btn btn-google" type="submit"><i class="fa fa-google"></i> Google</button></a>
           </div>
           <div class="registration">
             Don't have an account yet?<br/>

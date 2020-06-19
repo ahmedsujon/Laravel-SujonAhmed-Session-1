@@ -27,21 +27,9 @@
  <link href="{{ asset('assets/admin/css/style.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/admin/css/style-responsive.css') }}" rel="stylesheet">
   <script src="{{ asset('assets/admin/lib/chart-master/Chart.js') }}"></script>
-
-  <!-- =======================================================
-    Template Name: Dashio
-    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
 </head>
-
 <body>
   <section id="container">
-    <!-- **********************************************************************************************************************************************************
-        TOP BAR CONTENT & NOTIFICATIONS
-        *********************************************************************************************************************************************************** -->
-    <!--header start-->
     <header class="header black-bg">
       <div class="sidebar-toggle-box">
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
@@ -249,19 +237,15 @@
         </ul>
       </div>
     </header>
-    <!--header end-->
-    <!-- **********************************************************************************************************************************************************
-        MAIN SIDEBAR MENU
-        *********************************************************************************************************************************************************** -->
-    <!--sidebar start-->
+
     <aside>
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
           <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Sam Soffes</h5>
+          <h5 class="centered">Sujon Ahmed</h5>
           <li class="mt">
-            <a class="active" href="index.html">
+            <a class="active" href="{{ route('home') }}">
               <i class="fa fa-dashboard"></i>
               <span>Dashboard</span>
               </a>
@@ -269,13 +253,21 @@
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-desktop"></i>
-              <span>UI Elements</span>
+              <span>Category</span>
               </a>
             <ul class="sub">
-              <li><a href="general.html">General</a></li>
-              <li><a href="buttons.html">Buttons</a></li>
-              <li><a href="panels.html">Panels</a></li>
-              <li><a href="font_awesome.html">Font Awesome</a></li>
+              <li><a href="{{ route('category.create') }}">New Category</a></li>
+              <li><a href="{{ route('category.index') }}">All Category</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-desktop"></i>
+              <span>Products</span>
+              </a>
+            <ul class="sub">
+              <li><a href="{{ route('product.create') }}">New Product</a></li>
+              <li><a href="{{ route('product.index') }}">All Product</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -289,7 +281,6 @@
               <li><a href="advanced_table.html">Advanced Table</a></li>
             </ul>
           </li>
-
           <li>
             <a href="inbox.html">
               <i class="fa fa-envelope"></i>
@@ -304,31 +295,17 @@
               </a>
           </li>
         </ul>
-        <!-- sidebar menu end-->
       </div>
     </aside>
-    <!--sidebar end-->
-    <!-- **********************************************************************************************************************************************************
-        MAIN CONTENT
-        *********************************************************************************************************************************************************** -->
-    <!--main content start-->
     <section id="main-content">
         @yield('content')
     </section>
-    <!--main content end-->
-    <!--footer start-->
     <footer class="site-footer">
       <div class="text-center">
         <p>
           &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
         </p>
         <div class="credits">
-          <!--
-            You are NOT allowed to delete the credit link to TemplateMag with free version.
-            You can delete the credit link only if you bought the pro version.
-            Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
-            Licensing information: https://templatemag.com/license/
-          -->
           Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
         </div>
         <a href="index.html#" class="go-top">
@@ -356,26 +333,22 @@
   <!--script for this page-->
   <script src="{{ asset('assets/admin/lib/sparkline-chart.js') }}"></script>
   <script src="{{ asset('assets/admin/lib/zabuto_calendar.js') }}"></script>
-  <script type="text/javascript">
+  {{-- <script type="text/javascript">
     $(document).ready(function() {
       var unique_id = $.gritter.add({
         // (string | mandatory) the heading of the notification
         title: 'Welcome to Dashio!',
         // (string | mandatory) the text inside the notification
         text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo.',
-        // (string | optional) the image to display on the left
         image: 'img/ui-sam.jpg',
-        // (bool | optional) if you want it to fade out on its own or just sit there
         sticky: false,
-        // (int | optional) the time you want it to be alive for before fading out
         time: 8000,
-        // (string | optional) the class name you want to apply to that specific message
         class_name: 'my-sticky-class'
       });
 
       return false;
     });
-  </script>
+  </script> --}}
   <script type="application/javascript">
     $(document).ready(function() {
       $("#date-popover").popover({
