@@ -8,7 +8,7 @@
       <div class="col-md-12">
         <div class="content-panel">
           <table class="table table-striped table-advance table-hover">
-            <h4><i class="fa fa-angle-right"></i> Product Table</h4>
+            <h4><i class="fa fa-angle-right"></i> Cupon Table</h4>
             <hr>
             <thead>
               <tr>
@@ -21,17 +21,16 @@
             </thead>
             <tbody>
                 @php($i=1)
-                @foreach ($products as $product)
+                @foreach ($cupons as $cupon)
               <tr >
                 <td>{{$i++}}</td>
-              <td>{{ $product->name }}</td>
-              <td>{{ $product->code }}</td>
-              <td>{{ $product->created_at }}</td>
-              <td>111</td>
+              <td>{{ $cupon->name }}</td>
+              <td>{{ $cupon->code }}</td>
+              <td>{{ $cupon->created_at }}</td>
               <td>
-                <a href="{{ route('products.show', $product->id) }}" class="btn btn-success btn-xs"><span class="fa fa-check"></span></a>
-                <a href="{{ route('products.edit', $product->id) }}" class="btn btn-primary btn-xs"><span class="fa fa-edit"></span></a>
-                    <form action="{{ route('products.destroy', $product->id) }}" method="POST"
+                <a href="{{ route('cupon.show', $cupon->id) }}" class="btn btn-success btn-xs"><span class="fa fa-check"></span></a>
+                <a href="{{ route('cupon.edit', $cupon->id) }}" class="btn btn-primary btn-xs"><span class="fa fa-edit"></span></a>
+                    <form action="{{ route('cupon.destroy', $cupon->id) }}" method="POST"
                         style="display: inline-block;">
                         @csrf
                         @method('DELETE')
@@ -41,12 +40,16 @@
                         </button>
                     </form>
                </td>
+
               </tr>
               @endforeach
             </tbody>
           </table>
         </div>
+        <!-- /content-panel -->
       </div>
+      <!-- /col-md-12 -->
     </div>
+    <!-- /row -->
   </section>
 @endsection

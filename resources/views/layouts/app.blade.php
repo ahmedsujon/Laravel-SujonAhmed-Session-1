@@ -102,38 +102,36 @@
 							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 								<div class="header-btns-icon">
 									<i class="fa fa-shopping-cart"></i>
-									<span class="qty">3</span>
+									<span class="qty">{{ count((array) session('cart')) }}</span>
 								</div>
 								<strong class="text-uppercase">My Cart:</strong>
-								<br>
-								<span>35.20$</span>
+                                <br>
+                                <?php $total = 0 ?>
+                            @foreach((array) session('cart') as $id => $details)
+                                <?php $total += $details['price'] * $details['quantity'] ?>
+                            @endforeach
+								<span>{{ $total }}</span>
 							</a>
 							<div class="custom-menu">
 								<div id="shopping-cart">
 									<div class="shopping-cart-list">
+                                @if(session('cart'))
+                                @foreach(session('cart') as $id => $details)
 										<div class="product product-widget">
 											<div class="product-thumb">
-												<img src="{{ asset('assets/ecommerce/img/thumb-product01.jpg') }}" alt="">
+												<img src="{{ $details['image'] }}" alt="">
 											</div>
 											<div class="product-body">
-												<h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
-												<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+												<h3 class="product-price">{{ $details['price'] }} <span class="qty">x3</span></h3>
+												<h2 class="product-name"><a href="#">{{ $details['title'] }}</a></h2>
 											</div>
-											<button class="cancel-btn"><i class="fa fa-trash"></i></button>
+											<button class="cancel-btn" data-id="{{ $id }}"><i class="fa fa-trash"></i></button>
 										</div>
-										<div class="product product-widget">
-											<div class="product-thumb">
-												<img src="{{ asset('assets/ecommerce/img/thumb-product01.jpg') }}" alt="">
-											</div>
-											<div class="product-body">
-												<h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
-												<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-											</div>
-											<button class="cancel-btn"><i class="fa fa-trash"></i></button>
-										</div>
+                                @endforeach
+                                @endif
 									</div>
 									<div class="shopping-cart-btns">
-										<button class="main-btn">View Cart</button>
+										<a href="{{ route('product_cart') }}" class="main-btn">View Cart</a>
 										<button class="primary-btn">Checkout <i class="fa fa-arrow-circle-right"></i></button>
 									</div>
 								</div>
@@ -161,7 +159,7 @@
 		<div class="container">
 			<div id="responsive-nav">
 				<!-- category nav -->
-				<div class="category-nav">
+				{{-- <div class="category-nav">
 					<span class="category-header">Categories <i class="fa fa-list"></i></span>
 					<ul class="category-list">
 						<li><a href="#">Men’s Clothing</a></li>
@@ -170,7 +168,7 @@
 						<li><a href="#">Bags & Shoes</a></li>
 						<li><a href="#">View All</a></li>
 					</ul>
-				</div>
+				</div> --}}
 				<!-- /category nav -->
 
 				<!-- menu nav -->

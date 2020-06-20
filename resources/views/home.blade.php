@@ -5,7 +5,7 @@
       <div class="col-lg-9 main-chart">
         <!--CUSTOM CHART START -->
         <div class="border-head">
-        <h3>Welcome {{ Auth::user()->name }}</h3>
+        <h3>Welcome</h3>
         </div>
         <div class="custom-bar-chart">
           <ul class="y-axis">

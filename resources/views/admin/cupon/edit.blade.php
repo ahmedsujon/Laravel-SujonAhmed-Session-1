@@ -5,7 +5,7 @@
         <div class="col-lg-12">
           <h4><i class="fa fa-angle-right"></i> Basic Validations</h4>
           <div class="form-panel">
-          <form role="form" action="{{route('product.update', $category->id)}}" method="POST" class="form-horizontal style-form">
+          <form role="form" action="{{route('category.update', $category->id)}}" method="POST" class="form-horizontal style-form">
             @csrf
             @method('PATCH')
             <div class="form-group">
