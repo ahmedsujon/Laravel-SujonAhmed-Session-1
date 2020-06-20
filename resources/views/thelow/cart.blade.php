@@ -187,15 +187,12 @@
           url:'update-voucer',
          data: {_token: '{{ csrf_token() }}',coupon},
           success:function(name) {
-
               if(name.length<5){
                   document.getElementById("discount").innerHTML=name[0]['discount'];
 
                   document.getElementById("discountinput").value=name[0]['discount'];
                   document.getElementById("totalinput").value={{$total}}-name[0]['discount'];
                   document.getElementById("total").innerHTML={{$total}}-name[0]['discount'];
-
-
               }
               else{
                   document.getElementById("discount").innerHTML=name;

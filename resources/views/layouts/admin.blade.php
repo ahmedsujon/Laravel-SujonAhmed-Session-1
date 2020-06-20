@@ -269,10 +269,6 @@
               <li><a href="{{ route('products.create') }}">New Product</a></li>
               <li><a href="{{ route('products.index') }}">All Product</a></li>
             </ul>
-            <ul class="sub">
-                <li><a href="{{ route('cupon.create') }}">New Cupon</a></li>
-                <li><a href="{{ route('cupon.index') }}">Cupon List</a></li>
-              </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
@@ -283,6 +279,16 @@
                 <li><a href="{{ route('cupon.create') }}">New Cupon</a></li>
                 <li><a href="{{ route('cupon.index') }}">Cupon List</a></li>
               </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-desktop"></i>
+              <span>Slider</span>
+              </a>
+            <ul class="sub">
+              <li><a href="">New Slider</a></li>
+              <li><a href="">All Slider</a></li>
+            </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">

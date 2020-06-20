@@ -14,7 +14,7 @@
               <tr>
                 <th><i class="fa fa-bullhorn"></i> ID</th>
                 <th class="hidden-phone"><i class="fa fa-question-circle"></i> Name</th>
-                <th><i class="fa fa-bookmark"></i> Code</th>
+                <th><i class="fa fa-bookmark"></i> Product</th>
                 <th><i class=" fa fa-edit"></i> Created Time</th>
                 <th></th>
               </tr>
@@ -25,7 +25,13 @@
               <tr >
                 <td>{{$i++}}</td>
               <td>{{ $cupon->name }}</td>
-              <td>{{ $cupon->code }}</td>
+              <td>
+                @if($cupon->product_id)
+                {{ $cupon->product->title }}
+                @else
+                {{ _('No agent found') }}
+                @endif
+            </td>
               <td>{{ $cupon->created_at }}</td>
               <td>
                 <a href="{{ route('cupon.show', $cupon->id) }}" class="btn btn-success btn-xs"><span class="fa fa-check"></span></a>
